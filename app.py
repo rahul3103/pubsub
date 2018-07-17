@@ -16,7 +16,6 @@ def view():
 def listings():
     if request.method == 'POST':
         listing = json.loads(request.data)
-        print(listing)
         a.append(listing)
         return jsonify({'success': True}), 200
 

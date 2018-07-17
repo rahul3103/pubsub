@@ -6,6 +6,10 @@
     <title></title>
   </head>
   <body>
-    {{ items }}
+    <ul>
+    {% for item in items %}
+      <li>{{ item.name }}</li>
+    {% endfor %}
+  </ul>
   </body>
 </html>
