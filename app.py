@@ -12,7 +12,7 @@ def view():
     if request.method == 'GET':
         return render_template('home.html', items=a)
 
-@app.route('/data', methods=['POST'])
+@app.route('/_ah/push-handlers/receive_message', methods=['POST'])
 def listings():
     if request.method == 'POST':
         listing = json.loads(request.data)
